@@ -53,7 +53,12 @@ export class EditPatientComponent implements OnInit {
   }
 
   deletePatient(id: number) {
-    alert(id);
+    this.patientService.deletePatientById(id).subscribe(data => {
+      if (data === null) alert("Patient Removed Successfully");
+      window.location.reload();
+    },
+      error => console.log('error', error)
+    )
   }
 
   getAllPatients() {
