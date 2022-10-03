@@ -8,14 +8,16 @@
     <div class="row row-cols-1 row-cols-md-4 g-4">
         <div *ngFor="let patient of patientList | async">
             <div class="card h-100">
-                <div class="card-body patient-card text-center">
-                    <p class="card-title fw-bolder fs-4 text-primary">{{patient.patientName}}</p>
-                    <p class="fw-bold">Gender: {{patient.gender}}</p>
-                    <p class="fw-bold">Age: {{patient.age}} year</p>
-                    <P class="fw-bold">DOB: {{patient.dob}}</P>
-                    <p class="fw-bold">Phone: {{patient.phone}}</p>
-                    <p class="fw-bold">Email: {{patient.email}}</p>
-                    <p class="fw-bold">Address: {{patient.address}}</p>
+                <div class="card-body patient-card">
+                    <p class="card-title  text-center fw-bolder fs-3">Name: {{patient.patientName}}</p>
+                    <div>
+                        <p class="fw-bold">Gender: {{patient.gender}}</p>
+                        <p class="fw-bold">Age: {{patient.age}} year</p>
+                        <P class="fw-bold">DOB: {{patient.dob}}</P>
+                        <p class="fw-bold">Phone: {{patient.phone}}</p>
+                        <p class="fw-bold">Email: {{patient.email}}</p>
+                        <p class="fw-bold">Address: {{patient.address}}</p>
+                    </div>
                 </div>
             </div>
 
