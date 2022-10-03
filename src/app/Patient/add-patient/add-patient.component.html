@@ -1,2 +1,87 @@
 <Navigation-Bar></Navigation-Bar>
-<p>add-patient works!</p>
+
+
+<div class="add-patient">
+    <div class="m-5">
+        <h2 class="text-center text-dark fs-2 fw-bolder">Add New Patient</h2>
+    </div>
+
+    <div class="container add-patient-form">
+        <form #patientForm="ngForm" class="row g-3 form-group"
+            (ngSubmit)="handleOnSubmit(patientForm.value);patientForm.reset()" novalidate>
+            <!-- {{patientForm.form.value}} -->
+
+            <!-- //// Name //// -->
+            <div class="col-md-8">
+                <label for="inputPatientName" class="form-label fw-bold">Patient Name</label>
+                <input required ngModel #patientName="ngModel"
+                    [class.is-invalid]="patientName.invalid && patientName.touched" name="patientName" type="text"
+                    class="form-control" id="inputPatientName" placeholder="Name">
+                <small [class.d-none]="patientName.valid || patientName.untouched" class="text-danger">Patient Name is
+                    required</small>
+            </div>
+            <!-- //// Gender //// -->
+            <div class="col-md-4">
+                <label for="inputPatientGender" class="form-label fw-bold">Patient Gender</label>
+                <select required ngModel #gender="ngModel" name="gender" class="form-select form-control"
+                    id="inputPatientGender" placeholder="Gender" aria-label="Select Gender">
+                    <option value="Female">Female</option>
+                    <option value="Male">Male</option>
+                    <option value="Non-Binary">Non-Binary</option>
+                </select>
+            </div>
+            <!-- //// Age //// -->
+            <div class="col-md-4">
+                <label for="inputAge" class="form-label fw-bold">Age</label>
+                <input required ngModel #age="ngModel" [class.is-invalid]="age.invalid && age.touched" name="age"
+                    type="text" class="form-control" id="inputAge" placeholder="Age in year number">
+                <small [class.d-none]="age.valid || age.untouched" class="text-danger">Age is required</small>
+            </div>
+            <!-- //// Date of Birth //// -->
+            <div class="col-md-4">
+                <label for="inputDOB" class="form-label fw-bold">Date of Birth</label>
+                <input required ngModel #dob="ngModel" [class.is-invalid]="dob.invalid && dob.touched" name="dob"
+                    type="date" class="form-control" id="inputDOB">
+                <small [class.d-none]="dob.valid || dob.untouched" class="text-danger">DOB is required</small>
+            </div>
+            <!-- //// Phone Number //// -->
+            <div class="col-md-4">
+                <label for="inputPhone" class="form-label fw-bold">Phone</label>
+                <input required ngModel #phone="ngModel" [class.is-invalid]="phone.invalid && phone.touched"
+                    pattern="^\d{11}$" name="phone" type="text" class="form-control" id="inputPhone"
+                    placeholder="00000000000">
+                <small [class.d-none]="phone.valid || phone.untouched" class="text-danger">11 Digit number is
+                    required</small>
+            </div>
+            <!-- //// Email //// -->
+            <div class="col-12">
+                <label for="inputEmail" class="form-label fw-bold">Email</label>
+                <input required ngModel #email="ngModel" [class.is-invalid]="email.invalid && email.touched"
+                    pattern="^[a-zA-Z0-9+_.-]+@[a-zA-Z0-9.-]+$" name="email" type="text" class="form-control"
+                    id="inputEmail" placeholder="abc@gmail.com">
+                <small [class.d-none]="email.valid || email.untouched" class="text-danger">Valid Email is
+                    required</small>
+            </div>
+            <!-- //// Address //// -->
+            <div class="col-12">
+                <label for="inputAddress" class="form-label fw-bold">Address</label>
+                <input required ngModel #address="ngModel" [class.is-invalid]="address.invalid && address.touched"
+                    name="address" type="text" class="form-control" id="inputAddress" placeholder="Location">
+                <small [class.d-none]="address.valid || address.untouched" class="text-danger">Address is
+                    required</small>
+            </div>
+            <!-- //// Patient Photo //// -->
+            <!-- <div class="col-12">
+                <label for="inputPatientPhoto" class="form-label fw-bold">Upload Patient Photo</label>
+                <input required ngModel #patientPhoto="ngModel" name="patientPhoto" type="file" class="form-control"
+                    id="inputPatientPhoto">
+                <small [class.d-none]="patientPhoto.valid || patientPhoto.untouched" class="text-danger">Patient Photo
+                    is
+                    required</small>
+            </div> -->
+            <div class="col-12">
+                <button [disabled]="patientForm.form.invalid" type="submit" class="btn btn-dark fw-bold">Submit</button>
+            </div>
+        </form>
+    </div>
+</div>
