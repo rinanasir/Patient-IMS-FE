@@ -2,7 +2,7 @@ export class Patient {
     patientId !: number;
     patientName !: String;
     gender !: String;
-    age !: String;
+    age !: number;
     dob !: String;
     phone !: String;
     email !: String;

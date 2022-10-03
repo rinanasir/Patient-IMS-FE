@@ -34,7 +34,7 @@
             <div class="col-md-4">
                 <label for="inputAge" class="form-label fw-bold">Age</label>
                 <input required ngModel #age="ngModel" [class.is-invalid]="age.invalid && age.touched" name="age"
-                    type="text" class="form-control" id="inputAge" placeholder="Age in year number">
+                    type="number" class="form-control" id="inputAge" placeholder="Age in year number">
                 <small [class.d-none]="age.valid || age.untouched" class="text-danger">Age is required</small>
             </div>
             <!-- //// Date of Birth //// -->
