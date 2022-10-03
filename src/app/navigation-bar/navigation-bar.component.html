@@ -1,1 +1,13 @@
-<p>navigation-bar works!</p>
+<nav class="navbar navbar-light" style="background-color: #e3f2fd;">
+    <div class="container-fluid">
+        <a class="navbar-brand mb-0 h1 fs-2" routerLink="/">Patient Information System</a>
+        <div class="d-flex">
+            <button class="btn btn-outline-info text-dark fw-bold me-3" data-bs-toggle="tooltip" data-bs-placement="top"
+                title="List of All Patients" type="submit" routerLink="/patients">Patients</button>
+            <button class="btn btn-outline-info text-dark fw-bold me-3" data-bs-toggle="tooltip" data-bs-placement="top"
+                title="Add New Patient Info" type="submit" routerLink="/addPatient">Add Patient</button>
+            <button class="btn btn-outline-info text-dark fw-bold me-3" data-bs-toggle="tooltip" data-bs-placement="top"
+                title="Edit Patient Info" type="submit" routerLink="/editPatient">Edit Patient</button>
+        </div>
+    </div>
+</nav>
