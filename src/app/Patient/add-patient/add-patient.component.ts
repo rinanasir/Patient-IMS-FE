@@ -14,14 +14,14 @@ export class AddPatientComponent implements OnInit {
   }
 
   handleOnSubmit(patient: any) {
-    // this.patientService.addNewPatient(patient).subscribe(data => {
-    //   if (data == null) alert("Patient Infromation Saved Successfully.");
-    //   window.location.reload();
-    // },
-    //   error => console.log("error", error)
+    this.patientService.addNewPatient(patient).subscribe(data => {
+      if (data == null) alert("Patient Infromation Saved Successfully.");
+      window.location.reload();
+    },
+      error => console.log("error", error)
 
-    // )
-    console.log(patient);
+    )
+    // console.log(patient);
   }
 
 }
