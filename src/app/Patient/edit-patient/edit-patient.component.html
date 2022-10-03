@@ -57,7 +57,7 @@
                     <!-- //// Name //// -->
                     <div class="col-md-8">
                         <label for="inputPatientName" class="form-label fw-bold">Patient Name</label>
-                        <input required [(ngModel)]="name" #patientName="ngModel"
+                        <input required [(ngModel)]="pName" #patientName="ngModel"
                             [class.is-invalid]="patientName.invalid && patientName.touched" name="patientName"
                             type="text" class="form-control" id="inputPatientName" placeholder="Name">
                         <small [class.d-none]="patientName.valid || patientName.untouched" class="text-danger">Patient
@@ -66,55 +66,59 @@
                     <!-- //// Gender //// -->
                     <div class="col-md-6">
                         <label for="inputPatientGender" class="form-label fw-bold">Patient Gender</label>
-                        <select required ngModel #gender="ngModel" name="gender" class="form-select form-control"
-                            id="inputPatientGender" placeholder="Gender" aria-label="Select Gender">
+                        <select required [(ngModel)]="pGender" #gender="ngModel" name="gender"
+                            class="form-select form-control" id="inputPatientGender" placeholder="Gender"
+                            aria-label="Select Gender">
                             <option value="Female">Female</option>
                             <option value="Male">Male</option>
                             <option value="Non-Binary">Non-Binary</option>
                         </select>
                     </div>
                     <!-- //// Age //// -->
-                    <!-- <div class="col-md-6">
+                    <div class="col-md-6">
                         <label for="inputAge" class="form-label fw-bold">Age</label>
-                        <input required [(ngModel)]="age" #age="ngModel" [class.is-invalid]="age.invalid && age.touched"
-                            name="age" type="text" class="form-control" id="inputAge" placeholder="Age in year number">
-                        <small [class.d-none]="age.valid || age.untouched" class="text-danger">Age is required</small>
-                    </div> -->
+                        <input required [(ngModel)]="pAge" #age="ngModel"
+                            [class.is-invalid]="age.invalid && age.touched" name="age" type="number"
+                            class="form-control" id="inputAge" placeholder="00">
+                        <small [class.d-none]="age.valid || age.untouched" class="text-danger">Age is
+                            required</small>
+                    </div>
                     <!-- //// Date of Birth //// -->
-                    <!-- <div class="col-md-6">
+                    <div class="col-md-6">
                         <label for="inputDOB" class="form-label fw-bold">Date of Birth</label>
-                        <input required [(ngModel)]="dob" #dob="ngModel" [class.is-invalid]="dob.invalid && dob.touched"
-                            name="dob" type="date" class="form-control" id="inputDOB">
+                        <input required [(ngModel)]="pDob" #dob="ngModel"
+                            [class.is-invalid]="dob.invalid && dob.touched" name="dob" type="date" class="form-control"
+                            id="inputDOB">
                         <small [class.d-none]="dob.valid || dob.untouched" class="text-danger">DOB is required</small>
-                    </div> -->
+                    </div>
                     <!-- //// Phone Number //// -->
-                    <!-- <div class="col-md-6">
+                    <div class="col-md-6">
                         <label for="inputPhone" class="form-label fw-bold">Phone</label>
-                        <input required [(ngModel)]="phone" #phone="ngModel"
+                        <input required [(ngModel)]="phoneNo" #phone="ngModel"
                             [class.is-invalid]="phone.invalid && phone.touched" pattern="^\d{11}$" name="phone"
                             type="text" class="form-control" id="inputPhone" placeholder="00000000000">
                         <small [class.d-none]="phone.valid || phone.untouched" class="text-danger">11 Digit number is
                             required</small>
-                    </div> -->
+                    </div>
                     <!-- //// Email //// -->
-                    <!-- <div class="col-12">
+                    <div class="col-12">
                         <label for="inputEmail" class="form-label fw-bold">Email</label>
-                        <input required [(ngModel)]="email" #email="ngModel"
+                        <input required [(ngModel)]="pEmail" #email="ngModel"
                             [class.is-invalid]="email.invalid && email.touched"
                             pattern="^[a-zA-Z0-9+_.-]+@[a-zA-Z0-9.-]+$" name="email" type="text" class="form-control"
                             id="inputEmail" placeholder="abc@gmail.com">
                         <small [class.d-none]="email.valid || email.untouched" class="text-danger">Valid Email is
                             required</small>
-                    </div> -->
+                    </div>
                     <!-- //// Address //// -->
-                    <!-- <div class="col-12">
+                    <div class="col-12">
                         <label for="inputAddress" class="form-label fw-bold">Address</label>
-                        <input required [(ngModel)]="address" #address="ngModel"
+                        <input required [(ngModel)]="pAddress" #address="ngModel"
                             [class.is-invalid]="address.invalid && address.touched" name="address" type="text"
                             class="form-control" id="inputAddress" placeholder="Location">
                         <small [class.d-none]="address.valid || address.untouched" class="text-danger">Address is
                             required</small>
-                    </div> -->
+                    </div>
                     <!-- //// Patient Photo //// -->
                     <!-- <div class="col-12">
                 <label for="inputPatientPhoto" class="form-label fw-bold">Upload Patient Photo</label>

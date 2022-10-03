@@ -13,12 +13,13 @@ export class EditPatientComponent implements OnInit {
   patientList !: Observable<Patient[]>
 
   id !: number;
-  name !: String;
-  age !: number;
-  dob !: String;
-  phone !: String;
-  email !: String;
-  address !: String;
+  pName !: String;
+  pGender !: String;
+  pAge !: number;
+  pDob !: String;
+  phoneNo !: String;
+  pEmail !: String;
+  pAddress !: String;
 
 
   constructor(private patientService: PatientService) { }
@@ -38,15 +39,16 @@ export class EditPatientComponent implements OnInit {
   }
 
   getPatient(patientId: number) {
-    this.patientService.getPatientById(patientId).subscribe(data => {
+    this.patientService.getPatientById(patientId).subscribe((data) => {
       this.id = data.patientId
-      this.name = data.patientName
-      // this.age = data.age
-      // this.dob = data.dob
-      // this.phone = data.phone
-      // this.email = data.email
-      // this.address = data.address
-      // console.log(data);
+      this.pName = data.patientName
+      this.pGender = data.gender
+      this.pAge = data.age
+      this.pDob = data.dob
+      this.phoneNo = data.phone
+      this.pEmail = data.email
+      this.pAddress = data.address
+      // console.log(this.dob);
     })
   }
 
