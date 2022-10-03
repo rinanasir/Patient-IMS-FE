@@ -1,1 +1,24 @@
-<p>list-patient works!</p>
+<Navigation-Bar></Navigation-Bar>
+
+<div>
+    <h2 class="text-center text-dark fs-2 fw-bolder mt-4">List of Patients</h2>
+</div>
+
+<div class="m-4 pb-2">
+    <div class="row row-cols-1 row-cols-md-4 g-4">
+        <div *ngFor="let patient of patientList | async">
+            <div class="card h-100">
+                <div class="card-body patient-card text-center">
+                    <p class="card-title fw-bolder fs-4 text-primary">{{patient.patientName}}</p>
+                    <p class="fw-bold">Gender: {{patient.gender}}</p>
+                    <p class="fw-bold">Age: {{patient.age}} year</p>
+                    <P class="fw-bold">DOB: {{patient.dob}}</P>
+                    <p class="fw-bold">Phone: {{patient.phone}}</p>
+                    <p class="fw-bold">Email: {{patient.email}}</p>
+                    <p class="fw-bold">Address: {{patient.address}}</p>
+                </div>
+            </div>
+
+        </div>
+    </div>
+</div>
