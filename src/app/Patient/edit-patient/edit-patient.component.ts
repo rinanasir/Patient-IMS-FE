@@ -29,13 +29,13 @@ export class EditPatientComponent implements OnInit {
   }
 
   handleOnSubmit(patient: any) {
-    // this.bookService.updateBookById(book).subscribe(data => {
-    //   if (data === null) alert("Book Updated Successfully");
-    //   window.location.reload();
-    // },
-    //   error => console.log('error', error)
-    // )
-    console.log(patient);
+    this.patientService.updatePatientById(patient).subscribe(data => {
+      if (data === null) alert("Patient Updated Successfully");
+      window.location.reload();
+    },
+      error => console.log('error', error)
+    )
+    // console.log(patient);
   }
 
   getPatient(patientId: number) {
