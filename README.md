@@ -4,8 +4,6 @@ This is a simple patient infromation system. Here we can Creat, Read, Update, an
 
 # Used Technologies
 Frontned
--> Angular 14
--> Bootstrap CSS
+-> Angular 14, Bootstrap CSS
 Backend
--> Java
--> Spring Boot
+-> Java, Spring Boot
