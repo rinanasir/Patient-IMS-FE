@@ -8,6 +8,7 @@
     <div class="row row-cols-1 row-cols-md-4 g-4">
         <div *ngFor="let patient of patientList | async">
             <div class="card h-100">
+                <img src="..." class="card-img-top" alt="Patient Image">
                 <div class="card-body patient-card">
                     <p class="card-title  text-center fw-bolder fs-3">Name: {{patient.patientName}}</p>
                     <div>

@@ -73,11 +73,10 @@
             <!-- //// Patient Photo //// -->
             <!-- <div class="col-12">
                 <label for="inputPatientPhoto" class="form-label fw-bold">Upload Patient Photo</label>
-                <input required ngModel #patientPhoto="ngModel" name="patientPhoto" type="file" class="form-control"
-                    id="inputPatientPhoto">
+                <input required ngModel #patientPhoto="ngModel" name="patientPhoto" accept="image/*" type="file"
+                    class="form-control" id="inputPatientPhoto" (change)="uploadImage($event)">
                 <small [class.d-none]="patientPhoto.valid || patientPhoto.untouched" class="text-danger">Patient Photo
-                    is
-                    required</small>
+                    is required</small>
             </div> -->
             <div class="col-12">
                 <button [disabled]="patientForm.form.invalid" type="submit" class="btn btn-dark fw-bold">Submit</button>
@@ -85,3 +84,5 @@
         </form>
     </div>
 </div>
+
+<img [src]="url" alt="">

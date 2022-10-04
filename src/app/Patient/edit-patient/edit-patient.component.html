@@ -9,8 +9,9 @@
         <thead>
             <tr>
                 <th scope="col">Patient ID</th>
-                <th scope="col">Photo</th>
+                <!-- <th scope="col">Photo</th> -->
                 <th scope="col">Name</th>
+                <th scope="col">Age</th>
                 <th scope="col">Phone</th>
                 <th>Edit Patient</th>
                 <th>Delete Patient</th>
@@ -19,8 +20,9 @@
         <tbody *ngFor="let patient of patientList | async">
             <tr>
                 <th scope="row">{{patient.patientId}}</th>
-                <td></td>
+                <!-- <td></td> -->
                 <td>{{patient.patientName}}</td>
+                <td>{{patient.age}} year</td>
                 <td>{{patient.phone}}</td>
                 <td><button (click)="getPatient(patient.patientId)" type="submit" class="btn btn-info"
                         data-bs-toggle="modal" data-bs-target="#exampleModal">Edit</button>

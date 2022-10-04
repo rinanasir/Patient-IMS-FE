@@ -8,6 +8,9 @@ import { PatientService } from 'src/app/Service/patient.service';
 })
 export class AddPatientComponent implements OnInit {
 
+  fileToUpload !: File;
+  url: String = "";
+
   constructor(private patientService: PatientService) { }
 
   ngOnInit(): void {
@@ -23,5 +26,19 @@ export class AddPatientComponent implements OnInit {
     )
     // console.log(patient);
   }
+
+
+  // uploadImage(event: any) {
+  //   let fileType = event.target.files[0].type;
+  //   if (event.target.files[0]) {
+  //     let reader = new FileReader();
+  //     reader.readAsDataURL(event.target.files[0]);
+  //     reader.onload = (event: any) => {
+  //       this.url = event.target.result;
+  //     }
+  //   }
+  //   console.log(this.url);
+  // }
+
 
 }
