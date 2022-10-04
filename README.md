@@ -6,4 +6,4 @@ This is a simple patient infromation system. Here we can Creat, Read, Update, an
 Frontned
 -> Angular 14, Bootstrap CSS.
 Backend
--> Java, Spring Boot, MysQl
+-> Java, Spring Boot, MySQL
